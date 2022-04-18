@@ -1,0 +1,43 @@
+<!-- Name: Showad Huda
+	Course: CNT 4714 – Summer 2021 – Project Three
+	Assignment title: A Three-Tier Distributed Web-Based Application
+	Date: August 5, 2021
+-->
+
+<web-app>
+
+  <display-name>
+      Project 3
+  </display-name>
+
+  <!-- Servlet -->
+  <servlet>
+    <servlet-name>SQLServlet</servlet-name>
+
+    <servlet-class>SQLServlet</servlet-class>
+    <init-param>
+     <param-name>databaseDriver</param-name>
+     <param-value>com.mysql.cj.jdbc.Driver</param-value>
+    </init-param>
+    <init-param>
+     <param-name>databaseName</param-name>
+     <param-value>jdbc:mysql://localhost:8080/project3</param-value>
+    </init-param>
+    <init-param>
+      <param-name>username</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>root</param-value>
+    </init-param>
+
+  </servlet>
+
+  <!-- Servlet mapping -->
+  <servlet-mapping>
+    <servlet-name>SQLServlet</servlet-name>
+    <url-pattern>/SQLServlet</url-pattern>
+  </servlet-mapping>
+
+</web-app>
